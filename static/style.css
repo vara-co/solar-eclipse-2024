@@ -1,0 +1,123 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana;
+  background-image: url("eclipse-background-2.png");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+p {text-align: center;
+  width: 90%;
+  margin: 0;
+  padding: 30px;
+  padding-top: 0;
+}
+
+h2 {text-align: center;
+  padding-top: 30px;
+  font-size: 200%
+  }
+
+section {
+  padding: 30px;
+  margin: 50px;
+  background-color: rgba(0,0,0,.6);
+  margin-top: 50px;
+}
+
+#title {
+  font-size: 300%;
+  text-align: center;
+  color: yellow;
+  stroke: 2px;
+  background-color: rgba(0,0,0,.6);
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+#opening {
+  text-align: center;
+  padding: 30px;
+  margin-left:10%;
+  margin-right:10%;
+  width: 80%;
+}
+
+#map {
+  height: 800px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leaflet-control-layers-list {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.chart {
+  height: 1550px;}
+
+#chart1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90% !important;
+  margin-top: 50px;
+}
+
+#chart1p {
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chart2 {
+  float: right;
+  height: 300px;
+  margin-top: 50px;
+  margin-right: 2%;
+  width: 60%;
+}
+
+#chart2p {
+  float: left;
+  height: 300px;
+  margin-left: 1%;
+  margin-top: 50px;
+  width: 30%;
+}
+
+#video-intro {
+  margin-top: 50px;
+  background-color: rgba(0,0,0,.6);
+  padding-bottom: 10px;
+}
+
+video {
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  margin-top: 30px;
+}
+
+.videojs-background-wrap {
+  overflow:hidden;
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index: -998;
+}

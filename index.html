@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Solar Eclipse 2024</title>
+
+  <!-- !!!CHART2 Dependencies- Percentage of States with Total Eclipse Viewing to add to HTML by Haley-->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+
+  <!-- !!!VIDEO.JS Library section//ADD IT TO THE BODY TOO WHERE THE VID SHOULD BE to add to HTML by Haley-->
+  <link href="video-js.min.css" rel="stylesheet">
+  <script src="video.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- div for title bar -->
+  <div id="title">
+    <h1>Solar Eclipse 2024</h1>
+  </div>
+
+  <!-- div for opening paragraph -->
+  <section>
+  <div id="opening">
+    <h2>Welcome to our Interactive Solar Eclipse Analysis!</h2>
+    <p>Here, you'll discover an engaging way to explore the April 8th, 2024 Solar Eclipse,
+        which captivated many across the United States.
+       Let's begin by understanding what a solar eclipse entails.
+        According to NASA, a solar eclipse occurs when the Moon moves
+        between Earth and the Sun, casting a shadow that obscures the
+        Sun for observers on Earth's surface for a short period of time.
+        It's the shadow of the moon that produces the mesmerizing solar eclipse effect.<br><br>
+       Have you ever tried to block the sun with your thumb? Well,
+        imagine the moon as a much larger version of your thumb in
+        this scenario.<br>
+       The aim of this analysis is to embark on a journey of discovery
+        using data obtained from this event, uncovering insights and deepening our understanding of it.<br><br>
+       Guide to browse through the Map and Charts:<br><br>
+       To utilize the interactive map, select the view you prefer.
+        With just one click on the menu in the top right corner of the map,
+        switch between street view and topography. Beneath these options,
+        explore areas across the US that witnessed partial solar eclipses,
+        as well as the path of the total solar eclipse. Discover more details
+        about cities, states, and the duration of the total solar eclipse by
+        clicking on each darker blue circle within the total eclipse path on the map.
+       Additionally, you'll find informative charts on this page. Hover
+        over each chart to gain further insights.<br><br>
+       Missed the eclipse on April 8th? No problem! We've got you covered with a
+        bonus video, courtesy of NASA. Find it below the charts and immerse
+        yourself in or relive the experience.
+    </p>
+  </div>
+  </section>
+
+  <!-- The div that holds our map -->
+  <section>
+    <div id="map"></div>
+  </section>
+
+  <!-- The div that holds The Bar Chart -->
+  <section class="chart">
+  <div id="chart1"></div>
+
+  <div id="chart1p">
+    <h2>Average Duration by State</h2>
+    <p>Each state was analyzed for its average length of time
+        where the totality of the eclipse was visible. As you
+        zoom in on the map you will notice that the size of the
+        markers are larger in the center of the path of totality
+        and smaller at the perimeter which illustrates how the
+        length of time where totality was visible longer occurred
+        nearer the center of the path of totality. As you can see
+        from the bar chart, Michigan had the shortest average of
+        totality since only 3 cities in the southwest corner of the
+        state were in the path of totality. The average for the state
+        was 39 seconds of totality with Lambertville, MI having the
+        greatest length of time (1 minute) of viewable total eclipse.
+        It was hypothesized that the southern states would have longer
+        times of totality since they are closer to the equator but it
+        has been determined that the factor influencing longer times of
+        totality were states having the most cities within the center of
+        the path of totality.</p>
+  </div>
+
+  <!-- !!!!!! The div that holds the Pie Chart -->
+  <div id="chart2"></div>
+
+    <script type="text/javascript" src="static/logic.js"></script>
+
+  <div id="chart2p">
+      <h2>States with Total Eclipse Viewings</h2>
+      <p>'Texas', 'Oklahoma', 'Arkansas', 'Missouri', 'Kentucky', 'Illinois',
+          'Indiana', 'Ohio', 'Michigan', 'Pennsylvania', 'New York', 'Vermont', 'New Hampshire', 'Maine'</p>
+      <h2>States with only Partial Eclipse Viewings</h2>
+      <p>'Alabama', 'Alaska', 'Arizona', 'California',
+          'Colorado', 'Connecticut', 'Delaware', 'Florida',
+          'Georgia', 'Hawaii', 'Idaho', 'Iowa', 'Kansas', 'Louisiana',
+          'Maryland', 'Massachusetts', 'Minnesota', 'Mississippi', 'Montana',
+          'Nebraska', 'Nevada', 'New Jersey', 'New Mexico',
+          'North Carolina', 'North Dakota', 'Oregon', 'Rhode Island',
+          'South Carolina', 'South Dakota', 'Tennessee', 'Utah',
+          'Virginia', 'Washington', 'West Virginia', 'Wisconsin',
+          'Wyoming'</p>
+  </div>
+  </section>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  <!-- D3 JavaScript -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/logic.js"></script>
+
+<!-- !!!Our JavaScript Need these two, to be added to HTML by Haley-->
+ <script type="text/javascript" src="static/Cities_Outside_Totality.geojson"></script>
+ <script type="text/javascript" src="static/Eclipse_Cities_Totality.geojson"></script>
+ <script type="text/javascript" src="static/cleaned_TotalE_Duration.json"></script>
+
+
+  <div id="video-intro">
+    <H2>Bonus Video Below!</H2>
+  </div>
+
+
+<!-- !!!Using video.js library to add to HTML by Haley-->
+  <!-- !!!VIDEO.JS code to display the video-->
+    <video class="video-js vjs-default-skin" width="1024" height="576"  poster="image.png" controls data-setup='{}'>
+    <source src="https://images-assets.nasa.gov/video/GSFC_20240408_Solar_Eclipse_Telescopes/GSFC_20240408_Solar_Eclipse_Telescopes~orig.mp4" type="video/mp4">
+    <!-- !!!VIDEO.JS code // text for the video.js code in case the video does not display due to Javascript disabled or other issues on user's side-->
+    <p class="vjs-no-js">Javascript was disabled or not supported!</p>
+    </video>
+
+</body>
+
+</html>
