@@ -10,7 +10,7 @@ By M. Aparisio, H. Heer, M. Smith & L. Vara</h2><br/>
 
 ![SolarEclipseThumbImage](https://github.com/maparisio/Solar-Eclipse-2024/assets/152572519/3150433d-7f5f-4f8d-bdb7-917b7c1af124)
 
-Live Interactive Solar Eclipse Analysis website: https://maparisio.github.io/Solar-Eclipse-2024/
+Live Interactive Solar Eclipse Analysis website: https://vara-co.github.io/solar-eclipse-2024/
 
 Note: It is important that if you are going to use this code, all files
 are placed in a directory that matches this repository, for the better functionality of it.
