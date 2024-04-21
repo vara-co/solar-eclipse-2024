@@ -87,7 +87,7 @@ fetch('static/Cities_Outside_Totality.geojson')
                     const duration = calculateDurationMMSS(feature.properties.Start_Total, feature.properties.End_Total);
                     // The NAME key stores the city, and duration is the variable created above
                     return `<center><h3>City: ${feature.properties.NAME}, ${feature.properties.STATE}</h3><hr>
-                            <p>Total Eclipse Duration: ${duration} minutes</p></center>`;
+                            <p>Eclipse duration during totality (MM:SS format): ${duration} min/sec</p></center>`;
                 }
                 // Use the createCircleMarkers() we created. The parameter 'isPartial' is false,
                 // because this one is not the partial_eclipse overlay, the radius is our duration.
